@@ -39,3 +39,59 @@ Ensure you have the following installed on your system:
 - ChromeDriver / safaridriver (match your browser version)
 
 - Pip (Python package manager)
+
+  
+## **Installation**
+
+1. Clone the repository:
+```
+git clone https://github.com/ralucachedea/SpotifySeleniumPython.git
+cd SpotifySeleniumPython
+```
+2. Create a virtual environment (optional but recommended):
+```
+python -m venv venv
+source venv/bin/activate  # On Windows use: venv\Scripts\activate
+```
+3. Install dependencies:
+```
+pip install -r requirements.txt
+```
+
+
+## **Project Structure**
+SpotifySeleniumPythonPytest/
+    │── configuration/   # Configuration files (URLs, credentials, etc.)
+    │── ExcelFiles/      # Data-driven testing
+    │── pages/           # Page Object Model (POM) classes
+    │── Reports/         # Test reports
+    │── tests/           # Test cases
+    │── utilities/       # Utility functions (e.g., data handling, logging)
+    │── requirements.txt # Required dependencies
+
+
+## **Running Tests**
+
+To execute test cases, use:
+```
+pytest --html=reports/report.html --self-contained-html
+```
+To run tests in parallel:
+```
+pytest -n 4 --html=reports/report.html
+```
+
+
+## **Reporting**
+After execution, test reports will be available in the reports/ directory as an .json files.
+
+
+## **Contributing**
+
+1. Fork the repository.
+2. Create a feature branch (git checkout -b feature-branch).
+3. Commit your changes (git commit -m 'Add new feature').
+4. Push to the branch (git push origin feature-branch).
+5. Open a Pull Request.
+
+
