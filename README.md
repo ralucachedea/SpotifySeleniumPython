@@ -30,15 +30,11 @@ This repository contains a robust automation framework built using Python and Se
 
 
 ## **Prerequisites**
-Ensure you have the following installed on your system:
+Before you can start performing **Python** automation testing with **Selenium**, you would need to:
 
-- Python 3.13+
-
-- Google Chrome / Safari (latest version)
-
-- ChromeDriver / safaridriver (match your browser version)
-
-- Pip (Python package manager)
+* Install the latest Python build from the [official website](https://www.python.org/downloads/). We recommend using the latest version.
+* Make sure **pip** is installed in your system. You can install **pip** from [here](https://pip.pypa.io/en/stable/installation/).
+* Download the latest **Selenium Client** and its **WebDriver bindings** from the [official website](https://www.selenium.dev/downloads/). Latest versions of **Selenium Client** and **WebDriver** are ideal for running your automation script on LambdaTest Selenium cloud grid.
 
   
 ## **Installation**
