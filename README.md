@@ -39,19 +39,21 @@ Before you can start performing **Python** automation testing with **Selenium**,
   
 ## **Installation**
 
-1. Clone the repository:
-```
+**Step 1:** Clone the SpotifySeleniumPython repository and navigate to the code directory as shown below:
+
+```bash
 git clone https://github.com/ralucachedea/SpotifySeleniumPython.git
 cd SpotifySeleniumPython
 ```
-2. Create a virtual environment (optional but recommended):
-```
+**Step 2:** Create a virtual environment (optional but recommended):
+```bash
 python -m venv venv
 source venv/bin/activate  # On Windows use: venv\Scripts\activate
 ```
-3. Install dependencies:
-```
+**Step 3:** Download the driver from the link, or you can use **pip** to install it.
+```bash
 pip install -r requirements.txt
+export PYTHONWARNINGS="ignore:Unverified HTTPS request"   //Disable ssl warning
 ```
 
 
