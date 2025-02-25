@@ -60,6 +60,7 @@ pip install -r requirements.txt
 
 
 ## **Project Structure**
+```
 SpotifySeleniumPythonPytest/
     │── configuration/   # Configuration files (URLs, credentials, etc.)
     │── ExcelFiles/      # Data-driven testing
@@ -68,7 +69,7 @@ SpotifySeleniumPythonPytest/
     │── tests/           # Test cases
     │── utilities/       # Utility functions (e.g., data handling, logging)
     │── requirements.txt # Required dependencies
-
+```
 
 ## **Running Tests**
 
