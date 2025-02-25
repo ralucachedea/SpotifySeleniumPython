@@ -16,3 +16,26 @@ This repository contains a robust automation framework built using Python and Se
 - [Project Structure](#projectstructure)
 - [Running Tests](#runningtests)
 - [Contributing](#contributing)
+
+
+## **Features**
+
+
+- Page Object Model (POM) implementation
+- Data-driven testing with CSV/JSON/Excel support
+- Cross-browser testing support
+- Logging and reporting with pytest-html
+- CI/CD integration support
+
+
+
+## **Prerequisites**
+Ensure you have the following installed on your system:
+
+- Python 3.13+
+
+- Google Chrome / Safari (latest version)
+
+- ChromeDriver / safaridriver (match your browser version)
+
+- Pip (Python package manager)
