@@ -1,9 +1,10 @@
 from pickle import GLOBAL
 import allure
 from allure_commons.types import AttachmentType
-from selenium import webdriver
 from typing_extensions import Any
+from webdriver_manager.core import driver
 from utilities import ReadConfigurations
+from selenium import webdriver
 
 import pytest
 
@@ -21,20 +22,27 @@ def pytest_runtest_makereport(item: Any):
     rep = outcome.get_result()
     setattr(item, "rep_" + rep.when, rep)
 
-@pytest.fixture()
+def pytest_addoption(parser):
+    parser.addoption("--browser_name", action="store", default="chrome", help="browser selection")
+
+@pytest.fixture(scope="function")
 def setup(request):
-    global driver
-    browser = ReadConfigurations.read_configuration("basic info","browser")
     driver = None
-    if browser.__eq__("chrome"):
+
+    browser_name=request.config.getoption("browser_name")
+    if browser_name=="chrome":
         driver = webdriver.Chrome()
-    elif browser.__eq__("safari"):
+    elif browser_name=="firefox":
+        driver = webdriver.Firefox()
+    elif browser_name == "safari":
         driver = webdriver.Safari()
     else:
         print("Provide a valid browser")
     driver.maximize_window()
-    app_url = ReadConfigurations.read_configuration("basic info","url")
+    app_url = ReadConfigurations.read_configuration("basic info", "url")
     driver.get(app_url)
     request.cls.driver = driver
-    yield
+    yield driver
     driver.quit()
+
+
