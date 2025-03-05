@@ -9,9 +9,8 @@ class HomePage(BasePage):
     def __init__(self, driver):
         super().__init__(driver)
 
-    search_box_field_name_css = "input[placeholder='What do you want to play?']"
-    login_link_xpath = "//span[contains(text(),'Log in')]"
-
+    search_box_field_name_css = "input[data-testid = 'search-input']"
+    login_link_css = "button[data-testid = 'login-button']"
 
     def enter_song_into_search_box_field(self, song_name):
         self.driver.find_element(By.CSS_SELECTOR, self.search_box_field_name_css).send_keys(song_name)
@@ -22,7 +21,7 @@ class HomePage(BasePage):
         self.driver.find_element(By.CSS_SELECTOR, self.search_box_field_name_css).send_keys(Keys.SPACE)
 
     def click_on_login_link(self):
-        self.element_click("login_link_xpath",self.login_link_xpath)
+        self.element_click("login_link_css",self.login_link_css)
         return LoginPage(self.driver)
 
     def retrieve_homepage_title(self):
